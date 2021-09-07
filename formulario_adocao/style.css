@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+/* Variáveis */
+:root {
+    /* cores */ 
+    --hue: 345;
+    /* HSL cores */
+    --base-color: hsl(var(--hue) 36% 57%);
+    --base-color-second: hsl(var(--hue) 65% 88%);
+    --base-color-alt: hsl(var(--hue) 57% 53%);
+    --title-color: hsl(var(--hue) 41% 10%);
+    --text-color: hsl(0 0% 30%);
+    --text-color-light: hsl(0 0% 70%);
+    --body-color: hsl(0 0% 95%);
+}
+
+#titulo {
+    font: 700 2em 'Rubik', sans-serif;
+    color: var(--title-color);
+    text-align: center;
+}
+
+#subtitulo {
+    font: 400 1em 'Josefin Sans', sans-serif;
+    color: var(--base-color-alt);
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+#descricao {
+    font: 400 1em 'Rubik', sans-serif;
+    color: var(--text-color);
+    margin-bottom: 2em;
+    text-align: justify;
+}
+
+fieldset {
+    border: 0; 
+    margin-bottom: 0.5em;
+}
+
+body {
+    font: 400 1em 'Rubik', sans-serif;
+    color: var(--text-color);
+    background: var(--body-color);
+    -webkit-font-smoothing: antialiased;
+    margin-left: 17%;
+    margin-right: 17%;
+    margin-top: 2%;
+}
+
+input, select, textarea, button {
+    border-radius: 5px;
+}
+
+.campo {
+    margin-bottom: 1em;
+}
+
+.campo label {
+    margin-bottom: 0.2em;
+    color: var(--base-color-alt);
+    display: block;
+}
+
+fieldset.grupo .campo {
+    float: left;
+    margin-right: 1em;
+}
+
+.campo input[type="text"], .campo input[type="email"], .campo input[type="number"], .campo input[type="tel"], .campo select, .campo textarea {
+    padding: 0.3em;
+    border: 1px solid var(--base-color-second);
+    box-shadow: 2px 2px 2px var(--text-color-light);
+}
+
+.campo select option {
+    padding-right: 1em;
+}
+
+.campo input:focus, .campo select:focus, .campo textarea:focus, .campo #check:focus {
+    background: var(--base-color-second);
+}
+
+.botao {
+    font-size: 1.2em;
+    background: var(--base-color);
+    border: 0;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    color: var(--body-color);
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px var(--text-color-light);
+    text-shadow: 1px 1px 1px var(--text-color);
+    
+    transition: background 0.3s;
+}
+
+.botao:hover {
+    background: var(--base-color-alt);
+    box-shadow: inset 2px 2px 2px var(--text-color-light);
+    text-shadow: none;
+}
+
+.botao, select {
+    cursor: pointer;
+}
+
+#check {
+    display: inline-block;
+    color: var(--base-color-alt);
+    margin-top: 0.2em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    margin-left: 0%;
+}
+
+#check label {
+    margin-right: 0.8em;
+}
+
+#aviso {
+    margin-top: 1em;
+    text-align: justify;
+}
+
+#termos {
+    font: 400 1em 'Rubik', sans-serif;
+    color: var(--title-color);
+    margin-top: 1em;
+    text-align: center;
+}
+
+footer {
+    text-align: right;
+    margin-bottom: 1em;
+}

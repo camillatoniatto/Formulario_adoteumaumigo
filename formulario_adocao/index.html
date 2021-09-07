@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <!-- Metadados -->
+        <meta charset="utf-8">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Formulario de adoção simples">
+        <meta name="keywords" content="html">
+        <meta name="robots" content="index.php">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+        
+        <!-- Fontes -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+
+        <title>Formulário de adoção</title>
+    </head>
+
+    <body>
+        <header>
+        <!-- Cabeçalho -->
+            <div>
+                <h1 id="titulo">Formulário de adoção</h1>
+                <h3 id="subtitulo"><strong>Grupo Adote um Aumigo</strong></h3>
+                <p id="descricao">Antes de adotar, consulte seu lar, sua família, seu bolso, sua paciência e seu psicológico.<br>
+                    Se você tem certeza de que chegou o momento de aumentar a família, ficamos muito felizes pelo seu interesse em adotar um animal!<br>
+                    Como parte do processo de adoção, pedimos que que seja preenchido o formulário abaixo. Com base nas suas respostas, analisaremos o seu perfil e verificaremos se está apto para adotar um animal.
+                </p>
+            </div>    
+        </header>
+        
+        <main>
+            <div>
+                <h3 id="dados">Dados do adotante</h3>
+                <hr><br>
+            </div>
+            <!-- Início do formulário -->
+            <form action="index.html" method="post">
+                <fieldset class="grupo">
+                    <!-- Dados principais -->
+                    <div class="campo">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" required>
+                    </div>
+                    <div class="campo">
+                        <label for="sobrenome">Sobrenome</label>
+                        <input type="text" name="sobrenome" id="sobrenome" required>
+                    </div>
+                    <div class="campo">
+                        <label for="idade">Idade</label>
+                        <input type="number" name="idade" id="idade" required>
+                    </div>
+                   
+                    <div class="campo">
+                        <label for="CPF">CPF</label>
+                        <input type="text" name="CPF" id="CPF" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" required>
+                    </div>
+                </fieldset>
+                <fieldset class="grupo">
+                    <div class="campo">
+                        <label for="profissao">Profissão</label>
+                        <input type="text" name="profissao" id="profissao" required>
+                    </div>
+                    <div class="campo">
+                        <label for="genero">Gênero</label>
+                        <select id="genero" required>
+                            <option selected disabled value="">Selecione</option>
+                            <option>Masculino</option>
+                            <option>Feminino</option>
+                            <option>Não Binário</option>
+                            <option>Gênero Fluido</option>
+                            <option>Prefiro não dizer</option>
+                        </select> 
+                    </div> 
+                </fieldset>
+
+                <fieldset class="grupo">
+                    <!-- Dados para contato -->
+                    <div class="campo">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="campo">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" name="telefone" id="telefone" required>
+                    </div>
+                </fieldset>
+
+                <fieldset class="grupo">
+                    <!-- Lograoduro -->
+                    <div class="campo">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" name="endereco" id="endereco" required>
+                    </div>
+                    <div class="campo">
+                        <label for="numero">Nº</label>
+                        <input type="number" name="numero" id="numero" required>
+                    </div>
+                    <div class="campo">
+                        <label for="complemento">Complemento</label>
+                        <input type="text" name="complemento" id="complemento">
+                    </div>
+                    <div class="campo">
+                        <label for="bairro">Bairro</label>
+                        <input type="text" name="bairro" id="bairro" required>
+                    </div>
+                    </fieldset>
+                    <fieldset class="grupo">
+                    <div class="campo">
+                        <label for="CEP">CEP</label>
+                        <input type="text" name="CEP" id="CEP" required pattern="\d{5}-?\d{3}">
+                    </div>
+                    <div class="campo">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" name="cidade" id="cidade" required>
+                    </div>
+                    <div class="campo">
+                        <label for="uf">Estado</label>
+                        <input type="text" name="uf" id="uf" required>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <br>
+                    <h3 id="dados">Motivo da adoção</h3>
+                    <hr><br>
+                </div>
+                    <!-- Motivo da adoção -->
+                    <div class="campo">
+                        <label for="motivo">Por que você quer adotar um animalzinho?<br></label>
+                        <textarea rows="6" style="width: 43em" id="motivo" name="motivo"></textarea>
+                    </div>
+                
+                    <!-- Convivencia com outros pets -->
+                    <div class="campo">
+                        <label for="simnao">Você tem outros animais?</label>
+                        <label>
+                            <input type="radio" name="opcao" value="sim" checked>Sim
+                        </label>
+                        <label>
+                            <input type="radio" name="opcao" value="nao">Não
+                        </label>
+                    </div>
+                    <div class="campo">
+                        <label for="quantidade">Se sim, quantos animais você tem?</label>
+                        <select id="quantidade" required>
+                            <option selected disabled value="">Selecione</option>
+                            <option>Nenhum</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>Mais de 5</option> 
+                        </select> 
+                    </div>
+                    <div id="check">
+                        <label for="quais">Quais são os seus animais?</label><br>
+                        <input type="checkbox" id="gato" name="gato" value="gato">
+                        <label for="gato"> Gato </label>
+                        <input type="checkbox" id="cao" name="cao" value="cao">
+                        <label for="cao"> Cão </label>
+                        <input type="checkbox" id="ave" name="ave" value="ave">
+                        <label for="ave"> Ave </label>
+                        <input type="checkbox" id="roedor" name="roedor" value="roedor">
+                        <label for="roedor"> Roedor </label>
+                        <input type="checkbox" id="outro" name="outro" value="outro">
+                        <label for="outro"> Outros </label>
+                    </div>
+                    <hr>
+                
+                    
+                <!-- Aviso importante ao adotante -->
+                <h4 id="aviso">
+                    IMPORTANTE: Abandonar, soltar, deixar fugir, não alimentar, acorrentar, bater, amedrontar e deixar acasalar indiscriminadamente são formas de maus tratos com pena prevista na lei. O Grupo Adote um Aumigo atuará conforme artigo 164 do Código Penal, artigo 32 da Lei Federal 9.605, de 12 de fevereiro de 1998 (Lei de Crimes Ambientais), e da Lei Municipal 13.131, de 18 de maio de 2001 (Lei de Posse Responsável), contra qualquer um que descumpra as determinações previstas, sejam estes adotantes ou não. Em caso de dúvidas, busque informações e auxílios de profissionais veterinários.
+                 </h4>
+                 
+                 <div id="termos">
+                    <p><input type="checkbox" name="termos" required>
+                    Eu li e concordo com os Termos de Uso e Política de Privacidade* 
+                    </p>
+                </div>
+                <!-- Botão para enviar o formulário -->
+                <center><button class="botao" type="submit" onsubmit="">Adotar!</button></center>
+            </form>
+        <br><br>
+        </main>
+        <footer>
+            <hr/>
+            <div align=right><p>Desenvolvido por Camilla Toniatto</p></div>
+        </footer>
+    </body>
+</html>
